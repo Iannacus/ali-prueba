@@ -9,7 +9,7 @@ import Answer from './components/Answer';
 
 const ChatForm = styled.div`
   max-width: 700px;
-  height: 90vh;
+  min-height: 90vh;
   margin: auto;
   padding: 40px;
   background-color: #F5F5F5;
