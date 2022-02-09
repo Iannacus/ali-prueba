@@ -79,26 +79,28 @@ const DOBFields = ({ handler, showButton }) => {
             <Fields
                 title='¿Cuál es tu fecha de nacimiento?'
                 handleSubmit={handleSubmit}>
-
-                <SelectField
-                    list={daysList}
-                    handleValue={handleDay}
-                    error={dayError}
-                    setError={setDayError}
-                />
-                <SelectField
-                    list={monthsList}
-                    handleValue={handleMonth}
-                    error={monthError}
-                    setError={setMonthError}
-                />
-                <SelectField
-                    list={yearsList}
-                    handleValue={handleYear}
-                    error={yearError}
-                    setError={setYearError}
-                />
-                {showButton ? null : <SendButton />}
+                {!showButton &&
+                  <>
+                    <SelectField
+                        list={daysList}
+                        handleValue={handleDay}
+                        error={dayError}
+                        setError={setDayError}
+                    />
+                    <SelectField
+                        list={monthsList}
+                        handleValue={handleMonth}
+                        error={monthError}
+                        setError={setMonthError}
+                    />
+                    <SelectField
+                        list={yearsList}
+                        handleValue={handleYear}
+                        error={yearError}
+                        setError={setYearError}
+                    />
+                    <SendButton />
+                  </>}
 
             </Fields>
         </>

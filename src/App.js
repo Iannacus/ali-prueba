@@ -92,24 +92,24 @@ function App() {
           showButton={showDObFields}
         />
 
-        {showDObFields ? <>
+        {showDObFields && <>
           <Answer text={name}></Answer>
           <DOBFields
             handler={handleShowContactDataFields}
             showButton={showContactDataFields}
 
           />
-        </> : null}
+        </> }
 
-        {showContactDataFields ? <>
+        {showContactDataFields && <>
           <Answer text={DOB} />
           <ContactDataFields
             emailHandler={handleEmail}
             numberHandler={handleNumber}
             showButton={showButton}
-          /></> : null}
+          /></> }
 
-        {showButton ? <>
+        {showButton && <>
           <Answer text={email} />
           <Button
             onClick={() => {
@@ -121,9 +121,9 @@ function App() {
               setShowData(true);
             }}
           >Iniciar</Button>
-        </> : null}
+        </> }
 
-        {showData ? <Answer text={generateData()} /> : null};
+        {showData && <Answer text={generateData()} /> };
       </ChatForm>
     </>
   );

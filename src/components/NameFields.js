@@ -57,8 +57,7 @@ const NameFields = ({ handler, showButton }) => {
                     placeholder='Apellido Materno'
                     handleValue={handleMothersLastName}
                 />
-                {showButton ? null
-                    : <SendButton />}
+                {!showButton && <SendButton />}
 
             </Fields>
 
